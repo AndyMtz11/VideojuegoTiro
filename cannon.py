@@ -11,7 +11,7 @@ from turtle import *
 from freegames import vector
 
 ball = vector(-200, -200)
-speed = vector(0, 0)
+speed = vector(150, 150)
 targets = []
 
 
@@ -51,11 +51,12 @@ def move():
         target = vector(200, y)
         targets.append(target)
 
+    #Aqui esta el cambio de velocidad
     for target in targets:
-        target.x -= 0.5
+        target.x -= 1.2
 
     if inside(ball):
-        speed.y -= 0.35
+        speed.y -= 0.10
         ball.move(speed)
 
     dupe = targets.copy()
