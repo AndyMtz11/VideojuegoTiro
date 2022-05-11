@@ -69,7 +69,8 @@ def move():
 
     for target in targets:
         if not inside(target):
-            return
+            #Aqui en vez de regresar la función solo haces pass para que sigan saliendo pelotas y el juego sea infinito
+            pass
 
     ontimer(move, 50)
 
